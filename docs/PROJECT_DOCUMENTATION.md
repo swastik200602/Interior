@@ -94,9 +94,13 @@ npm.cmd run preview
 
 | Route | Page | Description |
 |---|---|---|
-| `/` | HomePage | Complete marketing homepage |
+| `/` | HomePage | Focused marketing landing page |
+| `/about` | AboutPage | Studio philosophy and design process |
+| `/services` | ServicesPage | Complete service offering |
 | `/projects` | ProjectsPage | Portfolio listing |
 | `/projects/:projectSlug` | ProjectDetailPage | Data-driven project detail |
+| `/testimonials` | TestimonialsPage | Client stories |
+| `/faq` | FaqPage | Frequently asked questions |
 | `/contact` | ContactPage | Contact information and CRM enquiry form |
 | `/not-found` | NotFoundPage | Branded 404 page |
 | `*` | Redirect | Redirects unknown URLs to `/not-found` |
@@ -204,6 +208,7 @@ The current project defines font stacks but does not include self-hosted font fi
 | Component | Responsibility |
 |---|---|
 | `ProjectCard` | Reusable project preview |
+| `PageHeader` | Shared page-level heading and introduction |
 | `Reveal` | Reduced-motion-aware scroll animation |
 | `LeadForm` | Form orchestration and UI state |
 | `PageLoader` | Lazy-page loading feedback |
@@ -211,16 +216,13 @@ The current project defines font stacks but does not include self-hosted font fi
 
 ## 10. Homepage composition
 
-The homepage is divided into focused components:
+The homepage is intentionally focused on discovery and conversion:
 
 1. `HeroSection`
-2. `AboutSection`
-3. `ServicesSection`
-4. `ProjectsSection`
-5. `ProcessSection`
-6. `TestimonialsSection`
-7. `FaqSection`
-8. `ContactCtaSection`
+2. `ProjectsSection`
+3. `ContactCtaSection`
+
+Full About, Services, Testimonials, and FAQ content lives on dedicated routes. Their page components reuse the established section components rather than duplicating content or styling.
 
 Marketing data is centralized in `src/constants/siteContent.js`. Project cards and project-detail pages consume the same `PROJECTS` array, preventing duplicated content.
 

@@ -31,7 +31,12 @@ function HeroSection() {
             </div>
           </motion.div>
         </div>
-        <a className="mt-16 hidden w-fit items-center gap-2 text-sm text-muted transition hover:text-foreground lg:flex" href="#about"><ArrowDown size={17} /> Discover our approach</a>
+        <Link
+          className="mt-16 hidden w-fit items-center gap-2 text-sm text-muted transition hover:text-foreground lg:flex"
+          to="/about"
+        >
+          <ArrowDown aria-hidden="true" size={17} /> Discover our approach
+        </Link>
       </Container>
     </section>
   )

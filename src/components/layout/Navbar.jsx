@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Menu } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { NAVIGATION_ITEMS } from '../../constants/navigation'
 import Button from '../ui/Button'
 import Container from '../ui/Container'
@@ -44,12 +44,16 @@ function Navbar() {
           <ul className="flex items-center gap-7">
             {NAVIGATION_ITEMS.map((item) => (
               <li key={item.href}>
-                <Link
-                  className="text-sm font-medium text-muted transition-colors hover:text-foreground"
+                <NavLink
+                  className={({ isActive }) =>
+                    `text-sm font-medium transition-colors hover:text-foreground ${
+                      isActive ? 'text-primary' : 'text-muted'
+                    }`
+                  }
                   to={item.href}
                 >
                   {item.label}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -61,7 +65,7 @@ function Navbar() {
 
         <button
           ref={menuButtonRef}
-          className="grid size-11 place-items-center rounded-md text-foreground hover:bg-surface lg:hidden"
+          className="grid size-11 place-items-center rounded-md text-foreground transition-colors hover:bg-surface lg:hidden"
           type="button"
           onClick={() => setIsMenuOpen(true)}
           aria-controls="mobile-navigation"

@@ -35,8 +35,12 @@ npm run build
 ## Routes
 
 - `/` - marketing homepage
+- `/about` - studio philosophy and design process
+- `/services` - complete service offering
 - `/projects` - portfolio listing
 - `/projects/:projectSlug` - project detail
+- `/testimonials` - client stories
+- `/faq` - frequently asked questions
 - `/contact` - validated CRM enquiry form
 
 ## Firebase Hosting

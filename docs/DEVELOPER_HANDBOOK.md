@@ -576,7 +576,7 @@ Avoid messages like `changes`, `final`, or `code updated`.
 
 > I built Interior Haven as a production-structured React 19 single-page application using Vite and Tailwind CSS v4. The UI is divided into reusable primitives, shared application components, layout components, and route-level pages. Marketing content is data-driven, so projects and repeated sections are easy to maintain.
 >
-> React Router handles the homepage, project listing, dynamic project detail, contact, and 404 routes. Pages are lazy loaded, and shared Navbar and Footer come from a parent layout route.
+> React Router handles dedicated Home, About, Services, Projects, Testimonials, FAQ, Contact, project-detail, and 404 routes. Pages are lazy loaded, and shared Navbar and Footer come from a parent layout route.
 >
 > The lead form uses React Hook Form for efficient form state and Zod for a single validation contract. API logic is not placed in the UI. Two Axios clients handle the backend’s two origins. The service layer normalizes inconsistent master response shapes into stable dropdown options and transforms form values into the ASP.NET CRM payload. State and district are dependent, and a request counter prevents stale district responses.
 >
