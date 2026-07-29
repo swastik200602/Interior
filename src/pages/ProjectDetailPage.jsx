@@ -55,7 +55,7 @@ function ProjectContent({ project }) {
               <dt className="text-xs font-semibold tracking-wider text-muted uppercase">
                 Scope
               </dt>
-              <dd className="mt-2">Interior design & styling</dd>
+              <dd className="mt-2">{project.scope ?? 'Interior design & styling'}</dd>
             </div>
           </dl>
         </div>

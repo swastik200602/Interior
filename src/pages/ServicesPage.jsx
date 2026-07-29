@@ -6,7 +6,7 @@ import ServicesSection from './home/ServicesSection'
 function ServicesPage() {
   useDocumentMeta(
     'Services | Interior Haven',
-    'Explore residential, commercial, space-planning, styling, renovation, and consultation services from Interior Haven.',
+    'Explore residential, commercial, POP ceiling, kitchen, space-planning, styling, renovation, and consultation services from Interior Haven.',
   )
 
   return (

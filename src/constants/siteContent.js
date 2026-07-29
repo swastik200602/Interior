@@ -1,4 +1,4 @@
-import { Building2, DraftingCompass, House, Palette, Sparkles, Trees } from 'lucide-react'
+import { Building2, ChefHat, DraftingCompass, House, Layers, Palette, Sparkles, Trees } from 'lucide-react'
 
 export const SITE = {
   name: 'Interior Haven',
@@ -14,6 +14,8 @@ export const SERVICES = [
   { icon: Palette, title: 'Styling & curation', text: 'A cohesive selection of furniture, finishes, lighting, textiles, and collected objects.' },
   { icon: Trees, title: 'Renovation direction', text: 'End-to-end creative direction that brings architectural changes and interiors together.' },
   { icon: Sparkles, title: 'Design consultation', text: 'Focused expert guidance for material decisions, room refreshes, and design clarity.' },
+  { icon: Layers, title: 'POP ceiling design', text: 'Sculptural false ceilings with layered lighting that add depth, detail, and atmosphere to every room.' },
+  { icon: ChefHat, title: 'Kitchen interiors', text: 'Beautiful, hard-working kitchens planned around your cooking rituals, storage needs, and style.' },
 ]
 
 export const PROJECTS = [
@@ -56,6 +58,28 @@ export const PROJECTS = [
     image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=85',
     summary: 'A calm creative workplace built around collaboration, focus, and natural texture.',
     detail: 'Acoustic surfaces, warm timber, and generous planting soften a simple open plan. A variety of work settings lets the team move easily between individual and collaborative tasks.',
+  },
+  {
+    slug: 'layered-light-residence',
+    title: 'Layered Light Residence',
+    category: 'POP Ceiling Design',
+    location: 'Noida, India',
+    year: '2026',
+    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85',
+    summary: 'A sculptural POP ceiling brings soft layers of light to a contemporary family living room.',
+    detail: 'Curved gypsum forms conceal indirect LED lighting and air-conditioning while giving the living and dining areas a calm architectural rhythm. Warm oak and textured plaster complete the ceiling-led composition.',
+    scope: 'POP ceiling design & lighting',
+  },
+  {
+    slug: 'earth-and-brass-kitchen',
+    title: 'Earth & Brass Kitchen',
+    category: 'Kitchen Interiors',
+    location: 'Lucknow, India',
+    year: '2026',
+    image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1600&q=85',
+    summary: 'A tactile, efficient kitchen where earthy cabinetry meets durable stone and brass details.',
+    detail: 'The U-shaped plan keeps preparation, cooking, and serving connected. Fluted timber cabinetry, a honed stone worktop, and carefully placed task lighting make this hardworking kitchen feel warm and considered.',
+    scope: 'Kitchen design & bespoke cabinetry',
   },
 ]
 

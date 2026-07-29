@@ -37,7 +37,7 @@ function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/90 backdrop-blur-md">
-      <Container className="flex h-20 items-center justify-between gap-8">
+      <Container className="flex min-h-20 items-center justify-between gap-3 sm:gap-6">
         <Logo />
 
         <nav className="hidden lg:block" aria-label="Primary navigation">
@@ -59,7 +59,12 @@ function Navbar() {
           </ul>
         </nav>
 
-        <Button as={Link} className="hidden lg:inline-flex" to="/contact">
+        <Button
+          as={Link}
+          size="sm"
+          className="ml-auto shrink-0 whitespace-nowrap px-3 text-xs sm:px-4 sm:text-sm lg:px-5"
+          to="/contact"
+        >
           Start a project
         </Button>
 
