@@ -19,18 +19,23 @@ function ChatExperience() {
       <AnimatePresence>
         {isOpen && <ChatWindow key="chat-window" onClose={() => setIsOpen(false)} />}
       </AnimatePresence>
-      <motion.button
-        className="assistant-stage"
-        onClick={() => setIsOpen((open) => !open)}
-        whileHover={reduceMotion ? undefined : { scale: 1.04, y: -3 }}
-        whileTap={reduceMotion ? undefined : { scale: 0.92, y: 3 }}
-        aria-label={isOpen ? 'Close interior design consultant' : 'Open interior design consultant'}
-        aria-expanded={isOpen}
-      >
-        <span className="assistant-halo" />
-        <Suspense fallback={<span className="assistant-loader">IH</span>}><Assistant3D /></Suspense>
-        {!isOpen && <span className="assistant-label"><strong>Ask Haven</strong><small>Interior Design Expert</small></span>}
-      </motion.button>
+      <AnimatePresence>
+        {!isOpen && <motion.button
+          className="assistant-stage"
+          onClick={() => setIsOpen(true)}
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.85 }}
+          whileHover={reduceMotion ? undefined : { scale: 1.04, y: -3 }}
+          whileTap={reduceMotion ? undefined : { scale: 0.92, y: 3 }}
+          aria-label="Open interior design consultant"
+          aria-expanded="false"
+        >
+          <span className="assistant-halo" />
+          <Suspense fallback={<span className="assistant-loader">IH</span>}><Assistant3D /></Suspense>
+          <span className="assistant-label"><strong>Ask Haven</strong><small>Interior Design Expert</small></span>
+        </motion.button>}
+      </AnimatePresence>
     </aside>
   )
 }
